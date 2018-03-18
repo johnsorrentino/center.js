@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src='../../center.js'></script>
+</head>
+
+<body>
+    <canvas id='avatars-1'></canvas>
+    <canvas id='avatars-2'></canvas>
+    <canvas id='avatars-3'></canvas>
+    <canvas id='avatars-4'></canvas>
+    <canvas id='avatars-5'></canvas>
+    <canvas id='avatars-6'></canvas>
+</body>
+
+</html>
+
+<script>
+
+    WebFont.load({
+        google: {
+            families: ['Leckerli One']
+        }, active: function () {
+            letters = ['c', 'e', 'n', 't', 'e', 'r']
+            colors = ['#DAF7A6', '#FFC300', '#FF5733', '#C70039', '#900C3F', '#581845']
+            fontColors = ['#581845', 'white', 'white', 'white', 'white', 'white']
+            for (var i = 0; i < letters.length; i++) {
+                centerjs({
+                    canvas: document.getElementById('avatars-' + (i + 1)),
+                    width: 64,
+                    height: 64,
+                    shape: 'circle',
+                    fontColor: fontColors[i],
+                    backgroundColor: colors[i],
+                    text: letters[i],
+                    fontFamily: 'Leckerli One',
+                    fontSize: 50
+                });
+            }
+        }
+    });
+</script>

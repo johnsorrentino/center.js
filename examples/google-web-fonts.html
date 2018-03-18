@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'></script>
+    <script src='../../center.js'></script>
+</head>
+
+<body>
+    <canvas id='google-web-fonts-1'></canvas>
+
+</html>
+
+<script>
+    WebFont.load({
+        google: {
+            families: ["Aladin"]
+        },
+        active: function () {
+            centerjs({
+                canvas: document.getElementById("google-web-fonts-1"),
+                width: 256,
+                height: 128,
+                shape: "rounded",
+                fontColor: "white",
+                backgroundColor: "#C70039",
+                text: "canvas",
+                fontFamily: "Aladin",
+                fontSize: 80
+            });
+        }
+    });
+</script>

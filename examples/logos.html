@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'></script>
+    <script src='../../center.js'></script>
+</head>
+
+<body>
+    <canvas id='logo'></canvas>
+</body>
+
+</html>
+
+<script>
+
+    WebFont.load({
+        google: {
+            families: ['Leckerli One']
+        }, active: function () {
+            centerjs({
+                canvas: document.getElementById('logo'),
+                width: 256,
+                height: 64,
+                shape: 'rounded',
+                fontColor: 'white',
+                backgroundColor: '#581845',
+                text: 'center.js',
+                fontFamily: 'Leckerli One',
+                fontSize: 50
+            });
+        }
+    });
+</script>
