@@ -149,7 +149,7 @@ function centerjs(options) {
         // let b_value = data[r_index + 2];
         // let a_value = data[r_index + 3];
 
-        if (r_value > 0) {
+        if (r_value === 255) {
           if (!textTop) {
             textTop = y;
           }
@@ -173,7 +173,7 @@ function centerjs(options) {
         let r_index = 4 * (canvas.width * y + x);
         let r_value = data[r_index];
 
-        if (r_value > 0) {
+        if (r_value === 255) {
           if (!textLeft) {
             textLeft = x;
           }
