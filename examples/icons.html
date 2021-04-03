@@ -1,57 +1,55 @@
 <html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="../../center.js"></script>
+  </head>
 
-<head>
-    <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'></script>
-    <script src='../../center.js'></script>
-</head>
-
-<body>
-    <canvas id='icons-1'></canvas>
-    <canvas id='icons-2'></canvas>
-    <canvas id='icons-3'></canvas>
-</body>
-
+  <body>
+    <canvas id="icons-1"></canvas>
+    <canvas id="icons-2"></canvas>
+    <canvas id="icons-3"></canvas>
+  </body>
 </html>
 
 <script>
-
-    WebFont.load({
-        google: {
-            families: ['Leckerli One']
-        }, active: function () {
-            centerjs({
-                canvas: document.getElementById('icons-1'),
-                width: 64,
-                height: 64,
-                shape: 'square',
-                fontColor: 'white',
-                backgroundColor: 'transparent',
-                text: '😎',
-                fontFamily: 'Leckerli One',
-                fontSize: 50
-            });
-            centerjs({
-                canvas: document.getElementById('icons-2'),
-                width: 64,
-                height: 64,
-                shape: 'square',
-                fontColor: 'white',
-                backgroundColor: 'transparent',
-                text: '🎆',
-                fontFamily: 'Leckerli One',
-                fontSize: 50
-            });
-            centerjs({
-                canvas: document.getElementById('icons-3'),
-                width: 64,
-                height: 64,
-                shape: 'square',
-                fontColor: 'white',
-                backgroundColor: 'transparent',
-                text: '👍',
-                fontFamily: 'Leckerli One',
-                fontSize: 50
-            });
-        }
-    });
+  WebFont.load({
+    google: {
+      families: ["Leckerli One"],
+    },
+    active: function () {
+      centerjs({
+        canvas: document.getElementById("icons-1"),
+        width: 64,
+        height: 64,
+        shape: "square",
+        fontColor: "white",
+        backgroundColor: "transparent",
+        text: "😎",
+        fontFamily: "Leckerli One",
+        fontSize: 50,
+      });
+      centerjs({
+        canvas: document.getElementById("icons-2"),
+        width: 64,
+        height: 64,
+        shape: "square",
+        fontColor: "white",
+        backgroundColor: "transparent",
+        text: "🎆",
+        fontFamily: "Leckerli One",
+        fontSize: 50,
+      });
+      centerjs({
+        canvas: document.getElementById("icons-3"),
+        width: 64,
+        height: 64,
+        shape: "square",
+        fontColor: "white",
+        backgroundColor: "transparent",
+        text: "👍",
+        fontFamily: "Leckerli One",
+        fontSize: 50,
+      });
+    },
+  });
 </script>

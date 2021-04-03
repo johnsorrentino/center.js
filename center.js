@@ -11,7 +11,7 @@ function centerjs(options) {
     backgroundColor: "black",
     text: "C",
     fontFamily: "Helvetica",
-    fontSize: 64
+    fontSize: 64,
   };
 
   /**
@@ -30,15 +30,15 @@ function centerjs(options) {
   const fontSize = data.fontSize;
 
   /**
-   * Set the width and height of the canvas as 2x of the desired width and 
+   * Set the width and height of the canvas as 2x of the desired width and
    * height. Use the style attribute of the canvas to set the desired width
    * and height of the canvas then scale the content up by a factor of 2. This
    * will allow support for retina displays.
    */
   canvas.width = 2 * width;
   canvas.height = 2 * height;
-  canvas.style.width = width + 'px';
-  canvas.style.height = height + 'px'; 
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
   ctx.scale(2, 2);
 
   /**
@@ -115,7 +115,7 @@ function centerjs(options) {
     ctx.font = fontSize + "px " + fontFamily;
 
     /**
-     * Make sure that there is enough room on the canvas for the text. Changing 
+     * Make sure that there is enough room on the canvas for the text. Changing
      * the width or height of a canvas element clears the content so you need
      * to set the font again.
      */
@@ -192,7 +192,7 @@ function centerjs(options) {
 
     return {
       vertical: canvasHorizontalCenterLine - textHorizontalCenterLine,
-      horizontal: canvasVerticalCenterLine - textVerticalCenterLine
+      horizontal: canvasVerticalCenterLine - textVerticalCenterLine,
     };
   }
 }

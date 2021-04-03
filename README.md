@@ -49,9 +49,9 @@ centerjs({
 
 There are 3 shapes to choose from:
 
-* square
-* circle
-* rounded
+- square
+- circle
+- rounded
 
 ```JavaScript
 centerjs({
