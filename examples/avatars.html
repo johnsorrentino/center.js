@@ -1,7 +1,6 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script src="../../center.js"></script>
   </head>
 
   <body>
@@ -14,7 +13,9 @@
   </body>
 </html>
 
-<script>
+<script type="module">
+  import CenterJS from "../dist/center.mjs";
+
   WebFont.load({
     google: {
       families: ["Leckerli One"],
@@ -31,7 +32,7 @@
       ];
       fontColors = ["#581845", "white", "white", "white", "white", "white"];
       for (var i = 0; i < letters.length; i++) {
-        centerjs({
+        let center = new CenterJS({
           canvas: document.getElementById("avatars-" + (i + 1)),
           width: 64,
           height: 64,
@@ -41,7 +42,7 @@
           text: letters[i],
           fontFamily: "Leckerli One",
           fontSize: 50,
-        });
+        }).generate();
       }
     },
   });
