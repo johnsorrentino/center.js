@@ -6,6 +6,13 @@ Center.js is a HTML5 Canvas based library that allows you to create simple text 
 
 Centering text with HTML5 canvas using `textAlign` and `textBaseline` has different behavior across browsers and fonts. Center.js removes inconsistencies by manually centering text.
 
+## Examples
+
+```
+yarn install
+yarn examples
+```
+
 ## Avatars
 
 ![Avatars 1](./examples/avatars-1.png)

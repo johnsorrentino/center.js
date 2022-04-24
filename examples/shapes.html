@@ -1,7 +1,5 @@
 <html>
-  <head>
-    <script src="../../center.js"></script>
-  </head>
+  <head></head>
 
   <body>
     <canvas id="square"></canvas>
@@ -10,8 +8,10 @@
   </body>
 </html>
 
-<script>
-  centerjs({
+<script type="module">
+  import CenterJS from "../dist/center.mjs";
+
+  new CenterJS({
     canvas: document.getElementById("square"),
     width: 64,
     height: 64,
@@ -21,8 +21,8 @@
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48,
-  });
-  centerjs({
+  }).generate();
+  new CenterJS({
     canvas: document.getElementById("circle"),
     width: 64,
     height: 64,
@@ -32,8 +32,8 @@
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48,
-  });
-  centerjs({
+  }).generate();
+  new CenterJS({
     canvas: document.getElementById("rounded"),
     width: 64,
     height: 64,
@@ -43,5 +43,5 @@
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48,
-  });
+  }).generate();
 </script>

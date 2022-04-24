@@ -1,7 +1,6 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script src="../../center.js"></script>
   </head>
 
   <body>
@@ -9,13 +8,15 @@
   </body>
 </html>
 
-<script>
+<script type="module">
+  import CenterJS from "../dist/center.mjs";
+
   WebFont.load({
     google: {
       families: ["Aladin"],
     },
     active: function () {
-      centerjs({
+      new CenterJS({
         canvas: document.getElementById("google-web-fonts-1"),
         width: 256,
         height: 128,
@@ -25,7 +26,7 @@
         text: "canvas",
         fontFamily: "Aladin",
         fontSize: 80,
-      });
+      }).generate();
     },
   });
 </script>

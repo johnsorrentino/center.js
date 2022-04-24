@@ -1,0 +1,35 @@
+{
+  "name": "@johnsorrentino/center.js",
+  "description": "Center.js is a HTML5 Canvas based library that allows you to create simple text based icons, avatars, logos, and more. The library assists with drawing simple shapes, centering text, and setting fonts and colors.",
+  "version": "0.0.1",
+  "author": "johnsorrentino",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "bugs": {
+    "url": "https://github.com/johnsorrentino/centerjs/issues"
+  },
+  "dependencies": {
+    "@swc/helpers": "^0.3.8"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  },
+  "homepage": "https://github.com/johnsorrentino/centerjs#readme",
+  "keywords": [
+    "icon",
+    "canvas",
+    "center text"
+  ],
+  "license": "MIT",
+  "main": "dist/center.js",
+  "module": "dist/center.mjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnsorrentino/centerjs.git"
+  },
+  "scripts": {
+    "build": "parcel build",
+    "examples": "parcel examples/index.html",
+    "watch": "parcel watch"
+  },
+  "source": "src/center.js"
+}

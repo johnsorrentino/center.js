@@ -1,15 +1,15 @@
 <html>
-  <head>
-    <script src="../../center.js"></script>
-  </head>
+  <head></head>
 
   <body>
     <canvas id="usage-1"></canvas>
   </body>
 </html>
 
-<script>
-  centerjs({
+<script type="module">
+  import CenterJS from "../dist/center.mjs";
+
+  new CenterJS({
     canvas: document.getElementById("usage-1"),
     width: 64,
     height: 64,
@@ -19,5 +19,5 @@
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48,
-  });
+  }).generate();
 </script>
