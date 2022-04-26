@@ -13,14 +13,15 @@ $parcel$export(module.exports, "default", function () { return $c5a7332a225138d2
 
 var $c5a7332a225138d2$var$CenterJS = /*#__PURE__*/ function() {
     "use strict";
-    function $c5a7332a225138d2$var$CenterJS(options) {
+    function $c5a7332a225138d2$var$CenterJS(canvas) {
         $2d8XG$swchelpers.classCallCheck(this, $c5a7332a225138d2$var$CenterJS);
-        this.options = options;
+        this.canvas = canvas;
     }
     $2d8XG$swchelpers.createClass($c5a7332a225138d2$var$CenterJS, [
         {
             key: "generate",
-            value: function generate() {
+            value: function generate(options) {
+                this.ctx = this.canvas.getContext("2d");
                 /**
      * Set defaults.
      */ var defaults = {
@@ -38,9 +39,7 @@ var $c5a7332a225138d2$var$CenterJS = /*#__PURE__*/ function() {
                 };
                 /**
      * Override defaults with options.
-     */ this.data = Object.assign({}, defaults, this.options);
-                this.canvas = this.data.canvas;
-                this.ctx = this.data.canvas.getContext("2d");
+     */ this.data = Object.assign({}, defaults, options);
                 this.width = this.data.width;
                 this.height = this.data.height;
                 this.text = this.data.text;

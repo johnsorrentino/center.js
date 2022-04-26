@@ -32,8 +32,9 @@
       ];
       fontColors = ["#581845", "white", "white", "white", "white", "white"];
       for (var i = 0; i < letters.length; i++) {
-        let center = new CenterJS({
-          canvas: document.getElementById("avatars-" + (i + 1)),
+        let canvas = document.getElementById("avatars-" + (i + 1));
+        let center = new CenterJS(canvas);
+        center.generate({
           width: 64,
           height: 64,
           shape: "circle",
@@ -42,7 +43,7 @@
           text: letters[i],
           fontFamily: "Leckerli One",
           fontSize: 50,
-        }).generate();
+        });
       }
     },
   });

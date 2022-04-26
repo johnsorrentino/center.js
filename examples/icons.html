@@ -18,8 +18,8 @@
       families: ["Leckerli One"],
     },
     active: function () {
-      new CenterJS({
-        canvas: document.getElementById("icons-1"),
+      let canvas = document.getElementById("icons-1");
+      new CenterJS(canvas).generate({
         width: 64,
         height: 64,
         shape: "square",
@@ -28,9 +28,10 @@
         text: "😎",
         fontFamily: "Leckerli One",
         fontSize: 50,
-      }).generate();
-      new CenterJS({
-        canvas: document.getElementById("icons-2"),
+      });
+
+      canvas = document.getElementById("icons-2");
+      new CenterJS(canvas).generate({
         width: 64,
         height: 64,
         shape: "square",
@@ -39,9 +40,10 @@
         text: "🎆",
         fontFamily: "Leckerli One",
         fontSize: 50,
-      }).generate();
-      new CenterJS({
-        canvas: document.getElementById("icons-3"),
+      });
+
+      canvas = document.getElementById("icons-3");
+      new CenterJS(canvas).generate({
         width: 64,
         height: 64,
         shape: "square",
@@ -50,7 +52,7 @@
         text: "👍",
         fontFamily: "Leckerli One",
         fontSize: 50,
-      }).generate();
+      });
     },
   });
 </script>

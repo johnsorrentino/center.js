@@ -1,5 +1,6 @@
 class $ab4e1cafa3bfd981$var$CenterJS {
-    generate() {
+    generate(options) {
+        this.ctx = this.canvas.getContext("2d");
         /**
      * Set defaults.
      */ const defaults = {
@@ -17,9 +18,7 @@ class $ab4e1cafa3bfd981$var$CenterJS {
         };
         /**
      * Override defaults with options.
-     */ this.data = Object.assign({}, defaults, this.options);
-        this.canvas = this.data.canvas;
-        this.ctx = this.data.canvas.getContext("2d");
+     */ this.data = Object.assign({}, defaults, options);
         this.width = this.data.width;
         this.height = this.data.height;
         this.text = this.data.text;
@@ -163,8 +162,8 @@ class $ab4e1cafa3bfd981$var$CenterJS {
     fontString() {
         return `${this.fontStyle} ${this.fontWeight} ${this.fontSize}px ${this.fontFamily}`;
     }
-    constructor(options){
-        this.options = options;
+    constructor(canvas){
+        this.canvas = canvas;
     }
 }
 var $ab4e1cafa3bfd981$export$2e2bcd8739ae039 = $ab4e1cafa3bfd981$var$CenterJS;

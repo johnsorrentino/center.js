@@ -9,8 +9,8 @@
 <script type="module">
   import CenterJS from "../dist/center.mjs";
 
-  new CenterJS({
-    canvas: document.getElementById("usage-1"),
+  const canvas = document.getElementById("usage-1");
+  new CenterJS(canvas).generate({
     width: 64,
     height: 64,
     shape: "square",
@@ -19,5 +19,5 @@
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48,
-  }).generate();
+  });
 </script>

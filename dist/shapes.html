@@ -539,8 +539,8 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _centerMjs = require("../dist/center.mjs");
 var _centerMjsDefault = parcelHelpers.interopDefault(_centerMjs);
-new _centerMjsDefault.default({
-    canvas: document.getElementById("square"),
+let canvas = document.getElementById("square");
+new _centerMjsDefault.default(canvas).generate({
     width: 64,
     height: 64,
     shape: "square",
@@ -549,9 +549,9 @@ new _centerMjsDefault.default({
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48
-}).generate();
-new _centerMjsDefault.default({
-    canvas: document.getElementById("circle"),
+});
+canvas = document.getElementById("circle");
+new _centerMjsDefault.default(canvas).generate({
     width: 64,
     height: 64,
     shape: "circle",
@@ -560,9 +560,9 @@ new _centerMjsDefault.default({
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48
-}).generate();
-new _centerMjsDefault.default({
-    canvas: document.getElementById("rounded"),
+});
+canvas = document.getElementById("rounded");
+new _centerMjsDefault.default(canvas).generate({
     width: 64,
     height: 64,
     shape: "rounded",
@@ -571,7 +571,7 @@ new _centerMjsDefault.default({
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48
-}).generate();
+});
 
 },{"../dist/center.mjs":"4p9DC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4p9DC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -579,7 +579,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>$ab4e1cafa3bfd981$export$2e2bcd8739ae039
 );
 class $ab4e1cafa3bfd981$var$CenterJS {
-    generate() {
+    generate(options) {
+        this.ctx = this.canvas.getContext("2d");
         /**
      * Set defaults.
      */ const defaults = {
@@ -597,9 +598,7 @@ class $ab4e1cafa3bfd981$var$CenterJS {
         };
         /**
      * Override defaults with options.
-     */ this.data = Object.assign({}, defaults, this.options);
-        this.canvas = this.data.canvas;
-        this.ctx = this.data.canvas.getContext("2d");
+     */ this.data = Object.assign({}, defaults, options);
         this.width = this.data.width;
         this.height = this.data.height;
         this.text = this.data.text;
@@ -743,8 +742,8 @@ class $ab4e1cafa3bfd981$var$CenterJS {
     fontString() {
         return `${this.fontStyle} ${this.fontWeight} ${this.fontSize}px ${this.fontFamily}`;
     }
-    constructor(options){
-        this.options = options;
+    constructor(canvas){
+        this.canvas = canvas;
     }
 }
 var $ab4e1cafa3bfd981$export$2e2bcd8739ae039 = $ab4e1cafa3bfd981$var$CenterJS;

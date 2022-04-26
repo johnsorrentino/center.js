@@ -11,8 +11,8 @@
 <script type="module">
   import CenterJS from "../dist/center.mjs";
 
-  new CenterJS({
-    canvas: document.getElementById("square"),
+  let canvas = document.getElementById("square");
+  new CenterJS(canvas).generate({
     width: 64,
     height: 64,
     shape: "square",
@@ -21,9 +21,10 @@
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48,
-  }).generate();
-  new CenterJS({
-    canvas: document.getElementById("circle"),
+  });
+
+  canvas = document.getElementById("circle");
+  new CenterJS(canvas).generate({
     width: 64,
     height: 64,
     shape: "circle",
@@ -32,9 +33,10 @@
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48,
-  }).generate();
-  new CenterJS({
-    canvas: document.getElementById("rounded"),
+  });
+
+  canvas = document.getElementById("rounded");
+  new CenterJS(canvas).generate({
     width: 64,
     height: 64,
     shape: "rounded",
@@ -43,5 +45,5 @@
     text: "C",
     fontFamily: "Helvetica",
     fontSize: 48,
-  }).generate();
+  });
 </script>

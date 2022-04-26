@@ -1,9 +1,11 @@
 class CenterJS {
-  constructor(options) {
-    this.options = options;
+  constructor(canvas) {
+    this.canvas = canvas;
   }
 
-  generate() {
+  generate(options) {
+    this.ctx = this.canvas.getContext("2d");
+
     /**
      * Set defaults.
      */
@@ -24,9 +26,7 @@ class CenterJS {
     /**
      * Override defaults with options.
      */
-    this.data = Object.assign({}, defaults, this.options);
-    this.canvas = this.data.canvas;
-    this.ctx = this.data.canvas.getContext("2d");
+    this.data = Object.assign({}, defaults, options);
     this.width = this.data.width;
     this.height = this.data.height;
     this.text = this.data.text;
