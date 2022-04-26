@@ -1,7 +1,7 @@
 {
   "name": "@johnsorrentino/center.js",
   "description": "Center.js is a HTML5 Canvas based library that allows you to create simple text based icons, avatars, logos, and more. The library assists with drawing simple shapes, centering text, and setting fonts and colors.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "johnsorrentino",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
